@@ -1,0 +1,40 @@
+<!-- Adapted From: http://www.java2s.com/Code/Java/JavaFX/UsingFXMLtocreateaUI.htm -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox id="vbox" prefHeight="400" prefWidth="800"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.Controller">
+
+    <MenuBar fx:id="menuBar" onKeyPressed="#handleKeyInput">
+        <menus>
+            <Menu text="File">
+                <items>
+                    <MenuItem text="New" onAction="#_new"/>
+                    <MenuItem text="Open" onAction="#open"/>
+                    <MenuItem text="Save" onAction="#save"/>
+                    <MenuItem text="Save As" onAction="#saveAs"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit" onAction="#exit"/>
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <columns>
+            <TableColumn fx:id="studentID" text="SID"></TableColumn>
+            <TableColumn fx:id="assignments" text="Assignments"></TableColumn>
+            <TableColumn fx:id="midterm" text="Midterm"></TableColumn>
+            <TableColumn fx:id="finalExam" text="Final Exam"></TableColumn>
+            <TableColumn fx:id="finalMark" text="Final Mark"></TableColumn>
+            <TableColumn fx:id="letterGrade" text="Letter Grade"></TableColumn>
+        </columns>
+    </TableView>
+
+</VBox>
